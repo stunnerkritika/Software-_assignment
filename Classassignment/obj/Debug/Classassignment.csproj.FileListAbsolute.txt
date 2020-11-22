@@ -1,0 +1,10 @@
+C:\Users\kritika\source\repos\Classassignment\Classassignment\bin\Debug\Classassignment.exe.config
+C:\Users\kritika\source\repos\Classassignment\Classassignment\bin\Debug\Classassignment.exe
+C:\Users\kritika\source\repos\Classassignment\Classassignment\bin\Debug\Classassignment.pdb
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.csprojAssemblyReference.cache
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.Form1.resources
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.Properties.Resources.resources
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.csproj.GenerateResource.cache
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.csproj.CoreCompileInputs.cache
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.exe
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.pdb
