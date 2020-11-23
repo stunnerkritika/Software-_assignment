@@ -212,54 +212,85 @@ namespace Classassignment
 
         public void DrawRectangle(string lengths, string breadths)
         {
-            int length = int.Parse(lengths);
-            int breadth = int.Parse(breadths);
-            Graphics g = this.pictureBox1.CreateGraphics();
-            if (fill){
-                g.FillRectangle(Default_Brush, initialX, initialY, breadth, length);
-            }
-            else
+            try
             {
-                g.DrawRectangle(default_pen, initialX, initialY, breadth, length);
+            
+                int length = int.Parse(lengths);
+                int breadth = int.Parse(breadths);
+                Graphics g = this.pictureBox1.CreateGraphics();
+                if (fill)
+                {
+                    g.FillRectangle(Default_Brush, initialX, initialY, breadth, length);
+                }
+                else
+                {
+                    g.DrawRectangle(default_pen, initialX, initialY, breadth, length);
+                }
             }
+            catch(FormatException e)
+            {
+                this.label4.Text = "please  enter a valid parameters";
+            }
+          
             
         }
         public void DrawCircle(string radiuss)
         {
-            int radius = int.Parse(radiuss);
-            Graphics g = this.pictureBox1.CreateGraphics();
-            if (fill)
+            try
             {
-                g.FillEllipse(Default_Brush, initialX, initialY, radius * 2, radius * 2);
+                int radius = int.Parse(radiuss);
+                Graphics g = this.pictureBox1.CreateGraphics();
+
+                if (fill)
+                {
+                    g.FillEllipse(Default_Brush, initialX, initialY, radius * 2, radius * 2);
+                }
+                else
+                {
+                    g.DrawEllipse(default_pen, initialX, initialY, radius * 2, radius * 2);
+                }
             }
-            else
+            catch (FormatException e)
             {
-                g.DrawEllipse(default_pen, initialX, initialY, radius * 2, radius * 2);
+                this.label4.Text = "please  enter a valid parameters";
             }
-           
+
+
+
+
+
         }
-       public void Drawtriangle(string side1,string side2,string side3)
+        public void Drawtriangle(string side1,string side2,string side3)
         {
-            int sideA = int.Parse(side1);
-            int sideB = int.Parse(side2);
-            int sideC = int.Parse(side3);
-            Graphics g = this.pictureBox1.CreateGraphics();
-            Point p1 = new Point(initialX, initialY );
-            Point p2 = new Point(sideA, initialY);
-            Point p3 = new Point(sideB, sideC);
-            Point[] points =
+            try
             {
+                int sideA = int.Parse(side1);
+                int sideB = int.Parse(side2);
+                int sideC = int.Parse(side3);
+                Graphics g = this.pictureBox1.CreateGraphics();
+                Point p1 = new Point(initialX, initialY);
+                Point p2 = new Point(sideA, initialY);
+                Point p3 = new Point(sideB, sideC);
+                Point[] points =
+                {
                 p1,p2,p3
 
             };
-            if (fill)
-            {
-                g.FillPolygon(Default_Brush, points);
+                if (fill)
+                {
+                    g.FillPolygon(Default_Brush, points);
+                }
+                else
+                {
+                    g.DrawPolygon(default_pen, points);
+                }
             }
-            else
+            catch (FormatException e)
             {
-                g.DrawPolygon(default_pen, points);
+                this.label4.Text = "please  enter a valid parameters";
             }
+
+
         }
         public Form1()
         {
