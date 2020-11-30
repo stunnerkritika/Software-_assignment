@@ -19,59 +19,7 @@ namespace Classassignment
         int initialY = 0;
 
 
-        public void Submitted()
-
-        {
-            // MessageBox.Show("Title","Button_click");
-            switch (this.textBox1.Text)
-            {
-                case " ":
-                    {
-                        this.label4.Text = "please enter your code!!";
-                        break;
-                    }
-                default:
-                    {
-                        string command = this.textBox2.Text;
-                        command = command.ToLower().Trim();
-                        switch (command)
-                        {
-                            case "":
-                                {
-                                    this.label4.Text = "please enter your Command!!";
-                                    break;
-                                }
-                            case "run":
-                                {
-                                    this.label4.Text = " ";
-                                    Methodexecuting(this.textBox1.Text, this.textBox2.Text);
-
-                                    break;
-                                }
-                            case "clear":
-                                {
-                                    clear();
-                                    break;
-
-                                }
-                            case "reset":
-                                {
-                                    clear();
-                                    this.pictureBox1.Image = null;
-                                    break;
-
-                                }
-
-                            default:
-                                {
-                                    this.label4.Text = " Not a valid command!";
-                                    break;
-                                }
-                        }
-                        break;
-                    }
-            }
-        }
+        
         public void clear()
         {
             this.label4.Text = " ";
@@ -390,10 +338,18 @@ namespace Classassignment
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Submitted();
+            validation v = new validation(this.textBox1.Text,this.textBox2.Text);
+            this.label4.Text = v.error_validation();
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_MouseDown(object sender, MouseEventArgs e)
         {
 
         }
