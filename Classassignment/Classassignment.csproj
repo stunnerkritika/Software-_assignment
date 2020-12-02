@@ -57,7 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapefactory.cs" />
     <Compile Include="Shapes.cs" />
-    <Compile Include="validation.cs" />
+    <Compile Include="Validation.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

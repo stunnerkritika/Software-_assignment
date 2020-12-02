@@ -252,12 +252,50 @@ namespace Classassignment
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string trimmed_Lower_code = this.textBox1.Text.ToLower().Trim();
-            string trimmed_Lower_command = this.textBox2.Text.ToLower().Trim();
-            validation v = new validation(trimmed_Lower_code,trimmed_Lower_command);
-            this.label4.Text = v.error_validation();
+            Implementation(this.textBox1.Text, this.textBox2.Text);
+            
+
+        }
+
+        public void Implementation(string code , string command)
+        {
+            command = command.Trim().ToLower();
+            code = code.Trim().ToLower();
 
 
+            switch (command)
+            {
+                case "":
+                    {
+                        this.label4.Text = "please enter your Command!!";
+                        break;
+                    }
+                case "run":
+                    {
+                        Validation ca = new Validation(code,command);
+                        this.label4.Text = ca.error_validation();
+                        break;
+                    }
+                case "clear":
+                    {
+                        clear();
+                        break;
+
+                    }
+                case "reset":
+                    {
+                        clear();
+                        this.pictureBox1.Image = null;
+                        break;
+
+                    }
+
+                default:
+                    {
+                        this.label4.Text = " Not a valid command!";
+                        break;
+                    }
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

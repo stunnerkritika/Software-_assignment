@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Classassignment
 {
-    public class validation
+    public class Validation
     {
         string errors = "";
-        public validation(string code ,string command) {
+        public Validation(string code ,string command) {
             switch (code)
             {
                case " ":
@@ -19,39 +19,16 @@ namespace Classassignment
                     }
                 default:
                     {
-                        switch (command)
+
+                        string[] code_array = code.Split(' ');
+                        if(code_array.Length == 2)
                         {
-                            case "":
-                                {
-                                    this.errors = "please enter your Command!!";
-                                    break;
-                                }
-                            case "run":
-                                {
-                                    Code_analyzing ca = new Code_analyzing(code);
-                                    this.errors = ca.error_handling_Code_analyzing();
-
-                                    break;
-                                }
-                            case "clear":
-                                {
-                                    //clear();
-                                    break;
-
-                                }
-                            case "reset":
-                                {
-                                   // clear();
-                                   // this.pictureBox1.Image = null;
-                                    break;
-
-                                }
-
-                            default:
-                                {
-                                    this.errors = " Not a valid command!";
-                                    break;
-                                }
+                            Code_analyzing ca = new Code_analyzing(code);
+                            this.errors = ca.error_handling_Code_analyzing();
+                        }
+                        else
+                        {
+                            this.errors = "Please enter a valid code syntax";
                         }
                         break;
                     }

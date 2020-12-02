@@ -105,7 +105,7 @@ namespace Classassignment
 
         public string error_handling_Code_analyzing()
         {
-            return this.errors;
+            return this.errors ;
         }
 
     }
