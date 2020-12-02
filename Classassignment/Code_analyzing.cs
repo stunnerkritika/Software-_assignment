@@ -14,19 +14,27 @@ namespace Classassignment
         public static bool fill = false;
         public static Pen default_pen = new Pen(Color.Black);
         public static SolidBrush default_brush = new SolidBrush(Color.Black);
+        public static int initial_X = 0;
+        public static int initial_Y = 0;
+        public static Graphics g=Form1.G;
 
         public Code_analyzing(string[] code)
         {
+            Command_Implementation ci = new Command_Implementation();
 
             string firstname = code[0];
             string[] parameters_string = code[1].Split(',');
             Shapefactory shapefactor = new Shapefactory();
-            switch (firstname)
+
+            string[] shapes = { "rectangle", "circle", "triangle" };
+            string[] otherCommands = { "moveto", "drawto","pen","fill" };
+
+            switch (shapes.Contains(firstname))
             {
-                case "rectangle":
+                case true:
 
                     {
-                        if (parameters_string.Length== 2)
+                        if (parameters_string.Length == 1||parameters_string.Length== 2 || parameters_string.Length == 3 )
                         {
 
                             try
@@ -60,7 +68,6 @@ namespace Classassignment
                             
 
 
-                            //DrawRectangle(codearr[1], codearr[2]);
                         }
                         else
                         {
@@ -68,74 +75,66 @@ namespace Classassignment
                         }
                         break;
                     }
-                case "circle":
+                case false :
                     {
-                        if (codearr.Length == 2)
+                        if(firstname== "moveto")
                         {
-                            //DrawCircle(codearr[1]);
+                            if (parameters_string.Length == 2)
+                            {
+                            ci.moveto(parameters_string);
+                                this.errors = ci.command_error_handling();
+                              
+                            }
+                            else
+                            {
+                                this.errors = "Not a valid Syntax";
+                            }
                         }
-                        else
+                        else if (firstname=="drawto")
                         {
-                            errors = " There must be  only one radius";
+                            if (parameters_string.Length == 2)
+                            {
+                                ci.drawto(parameters_string);
+                                this.errors = ci.command_error_handling();
 
+                            }
+                            else
+                            {
+                                this.errors = "Not a valid Syntax";
+                            }
+                        }
+                        else if(firstname == "pen")
+                        {
+                            if (parameters_string.Length == 1)
+                            {
+                                ci.Penswitcher(parameters_string[0]);
+                                this.errors = ci.command_error_handling();
 
+                            }
+                            else
+                            {
+                                this.errors = "Not a valid Syntax";
+                            }
                         }
-                        break;
-                    }
-                case "triangle":
-                    {
-                        if (codearr.Length == 4)
+                        else if (firstname == "fill")
                         {
-                            //Drawtriangle(codearr[1], codearr[2], codearr[3]);
+                            if(parameters_string.Length==1)
+                            {
+                                ci.isfillon(parameters_string);
+                                this.errors = ci.command_error_handling();
 
-                        }
-                        else
-                        {
-                            errors = "There must be three parameters";
-                        }
-                        break;
-
-                    }
-                case "pen":
-                    {
-                        if (codearr.Length == 2)
-                        {
-                           // Penswitcher(codearr[1]);
-                        }
-                        else
-                        {
-                            errors = "Must be color";
-                        }
-                        break;
-                    }
-                case "fill":
-                    {
-                        if (codearr.Length == 2)
-                        {
-                           // fillswitcher(codearr[1]);
-
-                        }
-                        else
-                        {
-                            errors = " you can only turn off or on the fill!";
-
-                        }
-                        break;
-                    }
-                case "moveto":
-                    {
-                        if (codearr.Length == 3)
-                        {
-                            //moveTo(codearr[1], codearr[2]);
+                            }
+                            else
+                            {
+                                this.errors = "Not a valid Syntax";
+                            }
 
                         }
                         else
                         {
-                            errors = " you can only turn off or on the fill!";
-
+                            this.errors = " There is no such command in the application.";
                         }
                         break;
-
                     }
             }
         }

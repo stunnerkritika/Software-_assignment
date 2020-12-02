@@ -14,7 +14,7 @@ namespace Classassignment
             switch(shape){ 
                 case "rectangle":
                 {
-                    return new Rectangle();
+                    return null;
                     break;
                 }
 
@@ -25,14 +25,14 @@ namespace Classassignment
                     }
                 case "triangle":
                     {
-                        return new Triangle();
+                        return null;
                         break;
                     }
 
                 default:
                     {
                     return null;
-                        break;
+                     break;
                 }
             }
         }
