@@ -16,7 +16,7 @@ namespace Classassignment
         public void getValue (int[] data , Pen pen)
         {
              radius = data[0];
-            p = pen;
+                p = pen;
         }
         public void getValue(int[] data, SolidBrush brush)
         {

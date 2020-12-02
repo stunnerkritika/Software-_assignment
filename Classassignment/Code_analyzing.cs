@@ -58,6 +58,7 @@ namespace Classassignment
                                     shape.getValue(parametersInInteger, default_pen);
 
                                 }
+                                shape.Draw(g, initial_X, initial_Y, fill);
 
 
                             }
