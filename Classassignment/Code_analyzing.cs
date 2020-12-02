@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Classassignment
 {
     class Code_analyzing
     {
-
-
         string errors = "";
+
+        public static bool fill = false;
+        public static Pen default_pen = new Pen(Color.Black);
+        public static SolidBrush default_brush = new SolidBrush(Color.Black);
 
         public Code_analyzing(string[] code)
         {
 
             string firstname = code[0];
             string[] parameters_string = code[1].Split(',');
+            Shapefactory shapefactor = new Shapefactory();
             switch (firstname)
             {
                 case "rectangle":
@@ -33,7 +37,23 @@ namespace Classassignment
                                 {
                                     parametersInInteger[i] = int.Parse(parameters_string[i]);
                                 }
-                            }catch (Exception e)
+
+
+                                Shapes shape = shapefactor.getShapes(firstname);
+
+                                if(fill)
+                                {
+                                    shape.getValue(parametersInInteger, default_brush);
+                                }
+                                else
+                                {
+                                    shape.getValue(parametersInInteger, default_pen);
+
+                                }
+
+
+                            }
+                            catch (Exception e)
                             {
                                 this.errors = "Parameter Invalid";
                             }
