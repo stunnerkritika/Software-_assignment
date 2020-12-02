@@ -12,17 +12,34 @@ namespace Classassignment
 
         string errors = "";
 
-        public Code_analyzing(string code)
+        public Code_analyzing(string[] code)
         {
-            code = code.ToLower().Trim();
-            string[] codearr = code.Split(' ');
-            switch (codearr[0])
+
+            string firstname = code[0];
+            string[] parameters_string = code[1].Split(',');
+            switch (firstname)
             {
                 case "rectangle":
 
                     {
-                        if (codearr.Length == 3)
+                        if (parameters_string.Length== 2)
                         {
+
+                            try
+                            {
+                                int[] parametersInInteger = new int[parameters_string.Length];
+
+                                for (int i = 0; i < parametersInInteger.Length; i++)
+                                {
+                                    parametersInInteger[i] = int.Parse(parameters_string[i]);
+                                }
+                            }catch (Exception e)
+                            {
+                                this.errors = "Parameter Invalid";
+                            }
+                            
+
+
                             //DrawRectangle(codearr[1], codearr[2]);
                         }
                         else

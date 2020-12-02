@@ -23,7 +23,7 @@ namespace Classassignment
                         string[] code_array = code.Split(' ');
                         if(code_array.Length == 2)
                         {
-                            Code_analyzing ca = new Code_analyzing(code);
+                            Code_analyzing ca = new Code_analyzing(code_array);
                             this.errors = ca.error_handling_Code_analyzing();
                         }
                         else
