@@ -19,7 +19,6 @@ namespace Classassignment
                     }
                 default:
                     {
-                        command = command.ToLower().Trim();
                         switch (command)
                         {
                             case "":
@@ -29,8 +28,8 @@ namespace Classassignment
                                 }
                             case "run":
                                 {
-                                    this.errors = " running";
-                                    //Methodexecuting(code,command);
+                                    Code_analyzing ca = new Code_analyzing(code);
+                                    this.errors = ca.error_handling_Code_analyzing();
 
                                     break;
                                 }

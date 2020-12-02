@@ -248,97 +248,13 @@ namespace Classassignment
         }
         public void Methodexecuting(string code, string command)
         {
-            code = code.ToLower().Trim();
-            string[] codearr = code.Split(' ');
-            switch (codearr[0])
-            {
-                case "rectangle":
-
-                    {
-                        if (codearr.Length == 3)
-                        {
-                            DrawRectangle(codearr[1], codearr[2]);
-                        }
-                        else
-                        {
-                            this.label4.Text = " There must be a length and a breadth";
-                        }
-                        break;
-                    }
-                case "circle":
-                    {
-                        if (codearr.Length == 2)
-                        {
-                            DrawCircle(codearr[1]);
-                        }
-                        else
-                        {
-                            this.label4.Text = " There must be  only one radius";
-
-
-                        }
-                        break;
-                    }
-                case "triangle":
-                    {
-                        if (codearr.Length == 4)
-                        {
-                            Drawtriangle(codearr[1], codearr[2], codearr[3]);
-
-                        }
-                        else
-                        {
-                            this.label4.Text = "There must be three parameters";
-                        }
-                        break;
-
-                    }
-                case "pen":
-                    {
-                        if (codearr.Length == 2)
-                        {
-                            Penswitcher(codearr[1]);
-                        }
-                        else
-                        {
-                            this.label4.Text = "Must be color";
-                        }
-                        break;
-                    }
-                case "fill":
-                    {
-                        if (codearr.Length == 2)
-                        {
-                            fillswitcher(codearr[1]);
-
-                        }
-                        else
-                        {
-                            this.label4.Text = " you can only turn off or on the fill!";
-
-                        }
-                        break;
-                    }
-                case "moveto":
-                    {
-                        if (codearr.Length == 3)
-                        {
-                            moveTo(codearr[1], codearr[2]);
-
-                        }
-                        else
-                        {
-                            this.label4.Text = " you can only turn off or on the fill!";
-
-                        }
-                        break;
-
-                    }
-            }
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            validation v = new validation(this.textBox1.Text,this.textBox2.Text);
+            string trimmed_Lower_code = this.textBox1.Text.ToLower().Trim();
+            string trimmed_Lower_command = this.textBox2.Text.ToLower().Trim();
+            validation v = new validation(trimmed_Lower_code,trimmed_Lower_command);
             this.label4.Text = v.error_validation();
 
 

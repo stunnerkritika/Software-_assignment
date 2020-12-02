@@ -6,17 +6,8 @@ using System.Threading.Tasks;
 
 namespace Classassignment
 {
-    public class Shapefactory
+    public interface Shapes
     {
-        string errors= "";
-    
-       public string error_from_shapefactory()
-    {
-        return errors;
-    }
-
 
     }
-   
-
 }
