@@ -7,9 +7,17 @@ using System.Drawing;
 
 namespace Classassignment
 {
+    /// <summary>
+    /// This class implements the command.
+    /// </summary>
     public class Command_Implementation
     {
         string error;
+
+        /// <summary>
+        /// This method is to turn on or off the filling according to user command given
+        /// </summary>
+        /// <param name="para"></param>
         public void isfillon(string[] para)
         {
             if (para[0] == "on")
@@ -30,8 +38,13 @@ namespace Classassignment
 
         }
 
+       /// <summary>
+       /// This method takes the string color and converts the pen or brushused for drawing
+       /// </summary>
+       /// <param name="color"></param>
         public void Penswitcher(string color)
         {
+           
             if (!Code_analyzing.fill)
             {
                 switch (color)
@@ -125,7 +138,10 @@ namespace Classassignment
             this.error = "color change to:" + color;
 
         }
-
+/// <summary>
+/// This method moves the initial position x and y  to the user givan parameter
+/// </summary>
+/// <param name="para"></param>
         public void moveto(string[] para)
         {
             try
@@ -147,7 +163,10 @@ namespace Classassignment
                 this.error = "Parameter Invalid";
             }
         }
-
+/// <summary>
+/// This mothod  draw the line from initial  positions to the user given point
+/// </summary>
+/// <param name="para"></param>
         public void drawto(string[] para)
         {
             try
@@ -169,7 +188,10 @@ namespace Classassignment
                 this.error = "Parameter Invalid";
             }
         }
-
+        /// <summary>
+        /// This returns the erros in the code implement class
+        /// </summary>
+        /// <returns></returns>
         public string command_error_handling()
         {
             return this.error;

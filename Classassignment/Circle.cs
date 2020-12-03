@@ -12,19 +12,34 @@ namespace Classassignment
         int radius;
         Pen p;
         SolidBrush  b;
-
+        /// <summary>
+        /// This method  returns the int value and pen 
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="pen"></param>
         public void getValue (int[] data , Pen pen)
         {
              radius = data[0];
                 p = pen;
         }
+        /// <summary>
+        /// This method returns the int data and solidbrush
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="brush"></param>
         public void getValue(int[] data, SolidBrush brush)
         {
             radius = data[0];
             b = brush;
         }
 
-
+/// <summary>
+/// This methhod takes the graphics int for initial position x and y bollen for drawing the shapes into shapes into the picture box.
+/// </summary>
+/// <param name="G"></param>
+/// <param name="x_axis"></param>
+/// <param name="y_axis"></param>
+/// <param name="turnfill"></param>
     public void Draw (Graphics G , int x_axis , int y_axis, bool turnfill)
         {
             if (turnfill)

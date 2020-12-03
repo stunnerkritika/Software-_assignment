@@ -8,3 +8,4 @@ C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classass
 C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.csproj.CoreCompileInputs.cache
 C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.exe
 C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.pdb
+C:\Users\kritika\source\repos\Classassignment\Classassignment\obj\Debug\Classassignment.Help.resources

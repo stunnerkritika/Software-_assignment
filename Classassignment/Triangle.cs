@@ -13,15 +13,25 @@ namespace Classassignment
             int side1, side2,side3;
             Pen p;
             SolidBrush b;
-
-            public void getValue(int[] data, Pen pen)
+        /// <summary>
+        /// This method takes the pen  and paremeter and implements for other drawing
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="pen"></param>
+           
+        public void getValue(int[] data, Pen pen)
             {
                 side1 = data[0];
                 side2 = data[1];
                 side3 = data[2];
                 p = pen;
             }
-            public void getValue(int[] data, SolidBrush brush)
+        /// <summary>
+        /// This method takes the pen  and paremeter and implements for other drawing
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="brush"></param>
+        public void getValue(int[] data, SolidBrush brush)
             {
                 side1 = data[0];
                 side2 = data[1];
@@ -30,7 +40,13 @@ namespace Classassignment
                 b = brush;
             }
 
-
+        /// <summary>
+        ///  This method takes the graphics int for initial position x and y for drawing the shapes into the picture box.
+        /// </summary>
+        /// <param name="G"></param>
+        /// <param name="x_axis"></param>
+        /// <param name="y_axis"></param>
+        /// <param name="turnfill"></param>
             public void Draw(Graphics G, int x_axis, int y_axis, bool turnfill)
             {
 

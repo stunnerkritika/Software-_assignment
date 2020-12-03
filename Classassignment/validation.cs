@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Classassignment
 {
+   
     public class Validation
     {
         string errors = "";
-        public Validation(string code ,string command) {
+       /// <summary>
+       /// This construcor takes the code and command and vallidates it for further implementation
+       /// </summary>
+       /// <param name="code"></param>
+       /// <param name="command"></param>
+       public Validation(string code ,string command) {
             switch (code)
             {
                case " ":
@@ -36,6 +42,10 @@ namespace Classassignment
 
         }
 
+        /// <summary>
+        /// This mnethod returns the error.
+        /// </summary>
+        /// <returns></returns>
         public string error_validation()
         {
             return this.errors;

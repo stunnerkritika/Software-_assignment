@@ -18,6 +18,10 @@ namespace Classassignment
         public static int initial_Y = 0;
         public static Graphics g=Form1.G;
 
+        /// <summary>
+        /// This method  takes the code array and  inmplements the user given command code for further running
+        /// </summary>
+        /// <param name="code"></param>
         public Code_analyzing(string[] code)
         {
             Command_Implementation ci = new Command_Implementation();
@@ -139,7 +143,10 @@ namespace Classassignment
                     }
             }
         }
-
+/// <summary>
+/// This method takes  the errors .
+/// </summary>
+/// <returns></returns>
         public string error_handling_Code_analyzing()
         {
             return this.errors ;
