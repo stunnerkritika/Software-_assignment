@@ -1,15 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.vbproj": {}
+    "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.vbproj": {
+    "C:\\Users\\kritika\\source\\repos\\Classassignment\\Classassignment\\Classassignment.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kritika\\source\\repos\\Classassignment\\Classassignment\\Classassignment.csproj",
+        "projectName": "Classassignment",
+        "projectPath": "C:\\Users\\kritika\\source\\repos\\Classassignment\\Classassignment\\Classassignment.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.vbproj",
+        "projectUniqueName": "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.csproj",
         "projectName": "UnitTesting",
-        "projectPath": "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.vbproj",
+        "projectPath": "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\UnitTesting.csproj",
         "packagesPath": "C:\\Users\\kritika\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kritika\\source\\repos\\Classassignment\\UnitTesting\\obj\\",
         "projectStyle": "PackageReference",
@@ -26,7 +36,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\kritika\\source\\repos\\Classassignment\\Classassignment\\Classassignment.csproj": {
+                "projectPath": "C:\\Users\\kritika\\source\\repos\\Classassignment\\Classassignment\\Classassignment.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

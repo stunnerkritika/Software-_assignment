@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Classassignment
 {
-    class Code_analyzing
+    public class Code_analyzing
     {
         string errors = "";
 
@@ -19,7 +19,7 @@ namespace Classassignment
         public static Graphics g=Form1.G;
 
         /// <summary>
-        /// This method  takes the code array and  inmplements the user given command code for further running
+        /// This method  takes the code array and  inmplements the user given command code for further running.
         /// </summary>
         /// <param name="code"></param>
         public Code_analyzing(string[] code)

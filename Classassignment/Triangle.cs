@@ -9,7 +9,6 @@ namespace Classassignment
 {
     public class Triangle:Shapes
     {
-       
             int side1, side2,side3;
             Pen p;
             SolidBrush b;

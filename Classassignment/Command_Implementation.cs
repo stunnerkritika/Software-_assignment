@@ -15,7 +15,7 @@ namespace Classassignment
         string error;
 
         /// <summary>
-        /// This method is to turn on or off the filling according to user command given
+        /// This method is to turn on or off the filling according to user command given implements .
         /// </summary>
         /// <param name="para"></param>
         public void isfillon(string[] para)
@@ -39,7 +39,7 @@ namespace Classassignment
         }
 
        /// <summary>
-       /// This method takes the string color and converts the pen or brushused for drawing
+       /// This method takes the string color and converts the pen or brush used for drawing.
        /// </summary>
        /// <param name="color"></param>
         public void Penswitcher(string color)
@@ -139,7 +139,7 @@ namespace Classassignment
 
         }
 /// <summary>
-/// This method moves the initial position x and y  to the user givan parameter
+/// This method moves the initial position x and y  to the user givan parameter.
 /// </summary>
 /// <param name="para"></param>
         public void moveto(string[] para)
@@ -164,7 +164,7 @@ namespace Classassignment
             }
         }
 /// <summary>
-/// This mothod  draw the line from initial  positions to the user given point
+/// This method  draw the line from initial  positions to the user given point
 /// </summary>
 /// <param name="para"></param>
         public void drawto(string[] para)
@@ -189,7 +189,7 @@ namespace Classassignment
             }
         }
         /// <summary>
-        /// This returns the erros in the code implement class
+        /// This returns the erros in the code implement class.
         /// </summary>
         /// <returns></returns>
         public string command_error_handling()
