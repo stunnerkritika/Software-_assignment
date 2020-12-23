@@ -9,7 +9,7 @@ namespace Classassignment
 {
     public class Rectangle : Shapes
     {
-        int length,breadth;
+        int length, breadth;
         Pen p;
         SolidBrush b;
 
@@ -18,10 +18,10 @@ namespace Classassignment
         /// </summary>
         /// <param name="data"></param>
         /// <param name="pen"></param>
-        public void getValue(int[] data, Pen pen)
+        public void getValue(float[] data, Pen pen)
         {
-            length = data[0];
-            breadth = data[1];
+            length = (int)data[0];
+            breadth = (int)data[1];
             p = pen;
         }
         /// <summary>
@@ -29,10 +29,10 @@ namespace Classassignment
         /// </summary>
         /// <param name="data"></param>
         /// <param name="brush"></param>
-        public void getValue(int[] data, SolidBrush brush)
+        public void getValue(float[] data, SolidBrush brush)
         {
-            length = data[0];
-            breadth = data[1];
+            length = (int)data[0];
+            breadth = (int)data[1];
             b = brush;
         }
         /// <summary>

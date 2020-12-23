@@ -9,20 +9,20 @@ namespace Classassignment
 {
     public interface Shapes
     {
-      /// <summary>
-      /// This method takes the brush and parameter and implements for other drawing
-      /// </summary>
-      /// <param name="param"></param>
-      /// <param name="Brush"></param>
-      void getValue(int[] param, SolidBrush Brush);
+        /// <summary>
+        /// This method takes the brush and parameter and implements for other drawing
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="Brush"></param>
+        void getValue(float[] param, SolidBrush Brush);
         /// <summary>
         /// This method takes the pen and parameter and implements for other drawing
         /// </summary>
         /// <param name="param"></param>
         /// <param name="pen"></param>
-        void getValue(int[] param, Pen pen);
+        void getValue(float[] param, Pen pen);
 
-       
+
         /// <summary>
         /// This method takes the graphics int for initial position x and y ,bollean  for drwaing the shapes into the picture box.
         /// </summary>
