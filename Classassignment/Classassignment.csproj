@@ -46,12 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conditional_implementation.cs" />
+    <Compile Include="Data_config.cs" />
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loop_Implementation.cs" />
+    <Compile Include="Method_Implementation.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Code_analyzing.cs" />
     <Compile Include="Command_Implementation.cs" />
@@ -68,6 +72,7 @@
     <Compile Include="Shapes.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="Validation.cs" />
+    <Compile Include="Varaibles.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

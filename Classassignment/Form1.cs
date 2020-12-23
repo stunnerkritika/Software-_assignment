@@ -24,7 +24,7 @@ namespace Classassignment
             this.textBox2.Text = " ";
 
         }
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -33,11 +33,11 @@ namespace Classassignment
             G = this.pictureBox1.CreateGraphics();
 
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             Implementation(this.textBox1.Text, this.textBox2.Text);
-            
+
 
         }
         /// <summary>
@@ -45,7 +45,7 @@ namespace Classassignment
         /// </summary>
         /// <param name="code"></param>
         /// <param name="command"></param>
-        public void Implementation(string code , string command)
+        public void Implementation(string code, string command)
         {
             command = command.Trim().ToLower();
             code = code.Trim().ToLower();
@@ -60,7 +60,7 @@ namespace Classassignment
                     }
                 case "run":
                     {
-                        Validation ca = new Validation(code,command);
+                        Validation ca = new Validation(code);
                         this.label4.Text = ca.error_validation();
                         break;
                     }
@@ -113,7 +113,7 @@ namespace Classassignment
                 write.Close();
                 MessageBox.Show("File Saved Successfully");
             }
-    }
+        }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -167,4 +167,4 @@ namespace Classassignment
             Application.Exit();
         }
     }
-    }
+}

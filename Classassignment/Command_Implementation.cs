@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 
 namespace Classassignment
-{
+{ 
     /// <summary>
     /// This class implements the command.
     /// </summary>
@@ -88,7 +88,6 @@ namespace Classassignment
                             break;
                         }
                 }
-
             }
             else
             {
