@@ -22,7 +22,6 @@ namespace Classassignment
         /// <param name="pen"></param>
         void getValue(float[] param, Pen pen);
 
-
         /// <summary>
         /// This method takes the graphics int for initial position x and y ,bollean  for drwaing the shapes into the picture box.
         /// </summary>

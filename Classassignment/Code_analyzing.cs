@@ -16,7 +16,7 @@ namespace Classassignment
         public static SolidBrush default_brush = new SolidBrush(Color.Black);
         public static int initial_X = 0;
         public static int initial_Y = 0;
-        public static Graphics g=Form1.G;
+        public static Graphics g = Form1.G;
 
         /// <summary>
         /// This method  takes the code array and  inmplements the user given command code for further running.
@@ -31,35 +31,49 @@ namespace Classassignment
             Shapefactory shapefactor = new Shapefactory();
 
             string[] shapes = { "rectangle", "circle", "triangle" };
-            string[] otherCommands = { "moveto", "drawto","pen","fill" };
+            string[] otherCommands = { "moveto", "drawto", "pen", "fill" };
 
             switch (shapes.Contains(firstname))
             {
                 case true:
 
                     {
-                        if (parameters_string.Length == 1||parameters_string.Length== 2 || parameters_string.Length == 3 )
+                        if (parameters_string.Length == 1 || parameters_string.Length == 2 || parameters_string.Length == 3)
                         {
 
                             try
                             {
-                                int[] parametersInInteger = new int[parameters_string.Length];
+                                float[] parametersInnumber = new float[parameters_string.Length];
 
-                                for (int i = 0; i < parametersInInteger.Length; i++)
+                                for (int i = 0; i < parametersInnumber.Length; i++)
                                 {
-                                    parametersInInteger[i] = int.Parse(parameters_string[i]);
+                                    if (Data_config.varaiablesList.Contains(parameters_string[i]))
+                                    {
+
+                                        int index = Data_config.varaiablesList.IndexOf(parameters_string[i]);
+                                        parametersInnumber[i] = (float)Data_config.varaibleValue[index];
+
+                                    }
+
+                                    else
+                                    {
+                                        parametersInnumber[i] = float.Parse(parameters_string[i]);
+
+                                    }
+
+
                                 }
 
 
                                 Shapes shape = shapefactor.getShapes(firstname);
 
-                                if(fill)
+                                if (fill)
                                 {
-                                    shape.getValue(parametersInInteger, default_brush);
+                                    shape.getValue(parametersInnumber, default_brush);
                                 }
                                 else
                                 {
-                                    shape.getValue(parametersInInteger, default_pen);
+                                    shape.getValue(parametersInnumber, default_pen);
 
                                 }
                                 shape.Draw(g, initial_X, initial_Y, fill);
@@ -70,30 +84,32 @@ namespace Classassignment
                             {
                                 this.errors = "Parameter Invalid";
                             }
-                            
+
+
+
                         }
                         else
                         {
-                            errors = " There must be a length and a breadth";
+                            errors = " There must be a valid parameters";
                         }
                         break;
                     }
-                case false :
+                case false:
                     {
-                        if(firstname== "moveto")
+                        if (firstname == "moveto")
                         {
                             if (parameters_string.Length == 2)
                             {
-                            ci.moveto(parameters_string);
+                                ci.moveto(parameters_string);
                                 this.errors = ci.command_error_handling();
-                              
+
                             }
                             else
                             {
                                 this.errors = "Not a valid Syntax";
                             }
                         }
-                        else if (firstname=="drawto")
+                        else if (firstname == "drawto")
                         {
                             if (parameters_string.Length == 2)
                             {
@@ -106,7 +122,7 @@ namespace Classassignment
                                 this.errors = "Not a valid Syntax";
                             }
                         }
-                        else if(firstname == "pen")
+                        else if (firstname == "pen")
                         {
                             if (parameters_string.Length == 1)
                             {
@@ -121,7 +137,7 @@ namespace Classassignment
                         }
                         else if (firstname == "fill")
                         {
-                            if(parameters_string.Length==1)
+                            if (parameters_string.Length == 1)
                             {
                                 ci.isfillon(parameters_string);
                                 this.errors = ci.command_error_handling();
@@ -141,13 +157,13 @@ namespace Classassignment
                     }
             }
         }
-/// <summary>
-/// This method takes  the errors .
-/// </summary>
-/// <returns></returns>
+        /// <summary>
+        /// This method takes  the errors .
+        /// </summary>
+        /// <returns></returns>
         public string error_handling_Code_analyzing()
         {
-            return this.errors ;
+            return this.errors;
         }
 
     }
