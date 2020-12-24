@@ -145,21 +145,29 @@ namespace Classassignment
         {
             try
             {
-                int[] parametersInInteger = new int[para.Length];
+                float[] parametersInInteger = new float[para.Length];
 
                 for (int i = 0; i < parametersInInteger.Length; i++)
-                {
-                    parametersInInteger[i] = int.Parse(para[i]);
+                { if (Data_config.varaiablesList.Contains(para[i]))
+                    {
+                        int index = Data_config.varaiablesList.IndexOf(para[i]);
+                        parametersInInteger[i] = (float)Data_config.varaibleValue[index];
+                    }
+                    else
+                    {
+                        parametersInInteger[i] = float.Parse(para[i]);
+
+                    }
                 }
 
-                Code_analyzing.initial_X = parametersInInteger[0];
-                Code_analyzing.initial_Y = parametersInInteger[1];
+                Code_analyzing.initial_X = (int)parametersInInteger[0];
+                Code_analyzing.initial_Y =(int) parametersInInteger[1];
                 this.error = "Intial point changed to " + Code_analyzing.initial_X + "," + Code_analyzing.initial_Y;
 
             }
             catch (Exception e)
             {
-                this.error = "Parameter Invalid";
+                this.error = e.Message;
             }
         }
         /// <summary>
@@ -170,11 +178,21 @@ namespace Classassignment
         {
             try
             {
-                int[] parametersInInteger = new int[para.Length];
+
+                float[] parametersInInteger = new float[para.Length];
 
                 for (int i = 0; i < parametersInInteger.Length; i++)
                 {
-                    parametersInInteger[i] = int.Parse(para[i]);
+                    if (Data_config.varaiablesList.Contains(para[i]))
+                    {
+                        int index = Data_config.varaiablesList.IndexOf(para[i]);
+                        parametersInInteger[i] = (float)Data_config.varaibleValue[index];
+                    }
+                    else
+                    {
+                        parametersInInteger[i] = float.Parse(para[i]);
+
+                    }
                 }
 
                 Code_analyzing.g.DrawLine(Code_analyzing.default_pen, Code_analyzing.initial_X, Code_analyzing.initial_Y, parametersInInteger[0], parametersInInteger[1]);
@@ -184,7 +202,7 @@ namespace Classassignment
             }
             catch (Exception e)
             {
-                this.error = "Parameter Invalid";
+                this.error = e.Message;
             }
         }
         /// <summary>

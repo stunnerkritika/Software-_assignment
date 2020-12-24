@@ -13,7 +13,6 @@ namespace Classassignment
         string code = "";
         public Conditional_implementation(string code)
         {
-            MessageBox.Show("I am here");
             this.code = code;
             if (code.Contains('='))
             {
@@ -63,7 +62,7 @@ namespace Classassignment
                             for (int i = 1; i < splitting_using_break_line.Length - 1; i++)
                             {
 
-                                vr = new Validation(splitting_using_break_line[i]);
+                                vr = new Validation(splitting_using_break_line[i].Trim());
                                 errors = vr.error_validation();
                             }
                         }
@@ -122,7 +121,7 @@ namespace Classassignment
                             Validation vr;
                             for (int i = 1; i < splitting_using_break_line.Length - 1; i++)
                             {
-                                vr = new Validation(splitting_using_break_line[i]);
+                                vr = new Validation(splitting_using_break_line[i].Trim());
                                 errors = vr.error_validation();
                             }
                         }
@@ -182,7 +181,7 @@ namespace Classassignment
                             for (int i = 1; i < splitting_using_break_line.Length - 1; i++)
                             {
 
-                                vr = new Validation(splitting_using_break_line[i]);
+                                vr = new Validation(splitting_using_break_line[i].Trim());
                                 errors = vr.error_validation();
                             }
                         }

@@ -82,7 +82,7 @@ namespace Classassignment
                             }
                             catch (Exception e)
                             {
-                                this.errors = "Parameter Invalid";
+                                this.errors = "Parameter Invalid :shapes";
                             }
 
 

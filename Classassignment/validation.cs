@@ -29,17 +29,17 @@ namespace Classassignment
                     }
                 default:
                     {
-                        if (code.Contains(";"))
+                        if (code.Contains(";")) 
                         {
                             string[] code_array = code.Split(';');
                             foreach (string codeBreaked in code_array)
                             {
                                 if (codeBreaked != "")
                                 {
+                                    MessageBox.Show(codeBreaked);
                                     executing_the_code(codeBreaked.Trim());
 
                                 }
-
 
                             }
                         }
@@ -83,7 +83,7 @@ namespace Classassignment
                 }
             }
 
-            else if (code_array.Length == 2)
+            else if (code_array.Length >= 2)
             {
                 Code_analyzing ca = new Code_analyzing(code_array);
                 this.errors = ca.error_handling_Code_analyzing();
@@ -95,7 +95,7 @@ namespace Classassignment
         }
 
         /// <summary>
-        /// This mnethod returns the error.
+        /// This method returns the error.
         /// </summary>
         /// <returns></returns>
         public string error_validation()
